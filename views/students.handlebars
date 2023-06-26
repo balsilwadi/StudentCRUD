@@ -1,0 +1,18 @@
+<h1 class="text-center">All Students</h1>
+<div class="row">
+
+    {{#if students}}
+    {{#each students}}
+    <div>
+      <h2><a href="/api/students/{{this._id}}"><small>student name: {{this.name}}</small></a></h2>
+      
+    </div>
+  {{/each}}
+  {{else}}
+  <div>
+      <h2>No Students</h2>
+      
+    </div>
+    {{/if}}
+  
+</div>

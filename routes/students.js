@@ -1,14 +1,6 @@
 const express = require('express');
 const router = express.Router()
-const students = [
-    {
-      name: "Bilal",
-      email: "balsilwadi@gmail.com",
-      age: 21,
-      imageUrl:
-        "https://media.licdn.com/dms/image/C5603AQGoWdpmVGT_wQ/profile-displayphoto-shrink_800_800/0/1651848055402?e=2147483647&v=beta&t=CEOgG11R6AlGOo660o6kawqBxY8r0Y9BS7DrSYWHjyI",
-    },
-  ];
+const User = require("../models/user");
 
   
   router.route('/')
@@ -37,4 +29,6 @@ const students = [
         .get((req,res)=>{
             res.send("get update " + req.params.id)
         })
+
+        module.exports = router
 
